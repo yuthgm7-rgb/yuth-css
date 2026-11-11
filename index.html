@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Y-SHOES — Modern footwear for every step."
+  >
+
+  <title><Y-SHOES </Y-S> | Modern Footwear</title>
+
+  <style>
+    ```css
+/* ==============================
+   RESET
+============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 82px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #002e8a;
+  background: #3a61bd;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.container {
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+
+/* ==============================
+   TOP BAR
+============================== */
+
+.top-bar {
+  padding: 10px 20px;
+
+  color: #291b1b;
+
+  background: #0652eb;
+
+  text-align: center;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.16em;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+
+/* ==============================
+   HEADER
+============================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+
+  z-index: 1000;
+
+  background: rgba(10, 78, 114, 0.92);
+
+  border-bottom: 1px solid #0f446f;
+
+  backdrop-filter: blur(14px);
+}
+
+.navbar {
+  min-height: 76px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 24px;
+}
+
+.logo {
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 27px;
+
+  font-weight: 900;
+
+  letter-spacing: -0.05em;
+
+  white-space: nowrap;
+}
+
+.logo span {
+  color: #168cff;
+}
+
+.nav-list {
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+
+  list-style: none;
+}
+
+.nav-link {
+  position: relative;
+
+  display: inline-block;
+
+  padding: 25px 0;
+
+  color: #000000;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition: color 0.25s ease;
+}
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  bottom: 18px;
+  left: 0;
+
+  height: 2px;
+
+  background: #1d63a9;
+
+  transform: scaleX(0);
+
+  transition: transform 0.25s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #168cff;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  transform: scaleX(1);
+}
+
+
+/* ==============================
+   CART
+============================== */
+
+.cart-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 12px 18px;
+
+  border: 1px solid #168cff;
+
+  border-radius: 999px;
+
+  color: #231c1c;
+
+  background: transparent;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.cart-button:hover {
+  background: #0057ff;
+
+  transform: translateY(-2px);
+}
+
+.cart-count {
+  width: 20px;
+  height: 20px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #332c2c;
+
+  background: #168cff;
+
+  font-size: 11px;
+}
+
+
+/* ==============================
+   HERO
+============================== */
+
+.hero {
+  min-height: 700px;
+
+  display: flex;
+
+  align-items: center;
+
+  color: #ffffff;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(3, 108, 129, 0.95),
+      rgba(30, 88, 111, 0.436)
+    ),
+    url("images/shoe-hero.jpg");
+
+  background-position: center;
+
+  background-size: cover;
+
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  max-width: 700px;
+
+  padding: 110px 0;
+}
+
+.eyebrow {
+  margin-bottom: 18px;
+
+  color: #168cff;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.25em;
+
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: clamp(54px, 8vw, 100px);
+
+  font-weight: 900;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.06em;
+}
+
+.hero-text {
+  max-width: 550px;
+
+  margin: 28px 0 32px;
+
+  color: #93a1bb;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+.button {
+  display: inline-block;
+
+  padding: 15px 24px;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.button-primary {
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #0066ff,
+    #1572a8
+  );
+
+  box-shadow: 0 10px 30px rgba(6, 95, 229, 0.3);
+}
+
+.button-secondary {
+  color: #4b4444;
+
+  background: rgba(12, 8, 8, 0.08);
+
+  border: 1px solid rgba(82, 60, 60, 0.25);
+
+  backdrop-filter: blur(10px);
+}
+
+.button:hover,
+.button:focus {
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 35px rgba(5, 119, 225, 0.3);
+}
+
+
+/* ==============================
+   SECTIONS
+============================== */
+
+.section {
+  padding: 110px 0;
+
+  background: #506085;
+}
+
+.section:nth-child(even) {
+  background: #1c53d2;
+}
+
+.section-header {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 45px;
+}
+
+.section-title {
+  max-width: 650px;
+
+  color: #494545;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: clamp(38px, 5vw, 62px);
+
+  font-weight: 900;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.05em;
+}
+
+.section-description {
+  max-width: 430px;
+
+  color: #a6b8d4;
+
+  font-size: 15px;
+}
+
+
+/* ==============================
+   CATEGORY CARDS
+============================== */
+
+.categories {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.category-card {
+  position: relative;
+
+  min-height: 350px;
+
+  overflow: hidden;
+
+  border: 1px solid #2858b0;
+
+  border-radius: 14px;
+
+  color: #ffffff;
+
+  background: #49608b;
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0.8;
+
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+
+.category-card:hover img {
+  transform: scale(1.07);
+
+  opacity: 0.95;
+}
+
+.category-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+
+  padding: 30px;
+
+  background:
+    linear-gradient(
+      transparent 25%,
+      rgba(152, 161, 174, 0.9)
+    );
+}
+
+.category-overlay h3 {
+  margin-bottom: 5px;
+
+  font-size: 32px;
+
+  font-weight: 900;
+
+  letter-spacing: -0.04em;
+}
+
+.category-overlay p {
+  color: #5e6a7d;
+
+  font-size: 13px;
+}
+
+
+/* ==============================
+   PRODUCTS
+============================== */
+
+.products {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+.product-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border: 1px solid #202735;
+
+  border-radius: 12px;
+
+  background: #1f4aa2;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #1c5894;
+}
+
+.product-image {
+  position: relative;
+
+  overflow: hidden;
+
+  background: #2d5399;
+}
+
+.product-image img {
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+
+  transition: transform 0.45s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.06);
+}
+
+.product-tag {
+  position: absolute;
+
+  top: 14px;
+  left: 14px;
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  color: #ffffff;
+
+  background: #0652c4;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-category {
+  color: #114f8d;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.product-name {
+  margin: 5px 0;
+
+  color: #ffffff;
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+.product-price {
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+.product-button {
+  width: 100%;
+
+  margin-top: 14px;
+
+  padding: 11px;
+
+  border: 1px solid #3d4b62;
+
+  border-radius: 999px;
+
+  color: #ffffff;
+
+  background: transparent;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.product-button:hover {
+  border-color: #2b5176;
+
+  background: #0066ff;
+}
+
+
+/* ==============================
+   PROMO
+============================== */
+
+.promo {
+  padding: 110px 0;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 20% 50%,
+      rgba(0, 102, 255, 0.18),
+      transparent 40%
+    ),
+    #1f3050;
+}
+
+.promo-inner {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 60px;
+}
+
+.promo h2 {
+  max-width: 600px;
+
+  font-size: clamp(42px, 6vw, 72px);
+
+  font-weight: 900;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.06em;
+}
+
+.promo p {
+  max-width: 500px;
+
+  margin: 22px 0 30px;
+
+  color: #9da6b5;
+}
+
+.promo-image {
+  overflow: hidden;
+
+  border: 1px solid #273142;
+
+  border-radius: 14px;
+}
+
+.promo-image img {
+  aspect-ratio: 4 / 3;
+
+  object-fit: cover;
+}
+
+
+/* ==============================
+   NEWSLETTER
+============================== */
+
+.newsletter {
+  padding: 110px 0;
+
+  text-align: center;
+
+  background: #526dad;
+}
+
+.newsletter h2 {
+  color: #ffffff;
+
+  font-size: clamp(38px, 5vw, 60px);
+
+  font-weight: 900;
+
+  letter-spacing: -0.05em;
+}
+
+.newsletter p {
+  max-width: 520px;
+
+  margin: 15px auto 30px;
+
+  color: #8f98a8;
+}
+
+.newsletter-form {
+  max-width: 520px;
+
+  display: flex;
+
+  margin: auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 15px 18px;
+
+  border: 1px solid #303948;
+
+  border-right: 0;
+
+  border-radius: 999px 0 0 999px;
+
+  outline: none;
+
+  color: #ffffff;
+
+  background: #6cb7e9;
+}
+
+.newsletter-form input::placeholder {
+  color: #737d8d;
+}
+
+.newsletter-form button {
+  padding: 15px 22px;
+
+  border: 0;
+
+  border-radius: 0 999px 999px 0;
+
+  color: #ffffff;
+
+  background: #0066ff;
+
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.newsletter-form button:hover {
+  background: #3c5875;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+  padding: 65px 0 30px;
+
+  color: #dce2eb;
+
+  background: #2e425e;
+}
+
+.footer-grid {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+
+  gap: 40px;
+
+  padding-bottom: 50px;
+}
+
+.footer-logo {
+  color: #ffffff;
+
+  font-size: 28px;
+
+  font-weight: 900;
+
+  letter-spacing: -0.04em;
+}
+
+.footer-description {
+  max-width: 330px;
+
+  margin-top: 15px;
+
+  color: #747e8e;
+
+  font-size: 14px;
+}
+
+.footer-title {
+  margin-bottom: 15px;
+
+  color: #264564;
+
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.12em;
+}
+
+.footer-links {
+  display: grid;
+
+  gap: 8px;
+
+  list-style: none;
+
+  color: #7f8999;
+
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.copyright {
+  padding-top: 25px;
+
+  border-top: 1px solid #2454af;
+
+  color: #5e6877;
+
+  font-size: 12px;
+
+  text-align: center;
+}
+
+
+/* ==============================
+   MOBILE MENU
+============================== */
+
+.menu-toggle {
+  display: none;
+
+  border: 0;
+
+  color: #ffffff;
+
+  background: transparent;
+
+  font-size: 26px;
+
+  cursor: pointer;
+}
+
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 1000px) {
+
+  .nav-list {
+    gap: 18px;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .categories {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .category-card:last-child {
+    grid-column: span 2;
+  }
+
+  .promo-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .promo-image {
+    max-width: 650px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+
+@media (max-width: 760px) {
+
+  .container {
+    width: min(100% - 28px, 600px);
+  }
+
+  .navbar {
+    min-height: 68px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+
+    position: absolute;
+
+    top: 68px;
+
+    right: 14px;
+    left: 14px;
+
+    padding: 15px;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 0;
+
+    border: 1px solid #252c39;
+
+    border-radius: 12px;
+
+    background: #1f2b43;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .nav-link {
+    display: block;
+
+    padding: 14px;
+
+    color: #d5dbe5;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .cart-button {
+    display: none;
+  }
+
+  .hero {
+    min-height: 650px;
+  }
+
+  .hero-content {
+    padding: 70px 0;
+  }
+
+  .hero-title {
+    font-size: clamp(48px, 15vw, 75px);
+  }
+
+  .section {
+    padding: 75px 0;
+  }
+
+  .section-header {
+    display: block;
+  }
+
+  .section-description {
+    margin-top: 18px;
+  }
+
+  .categories {
+    grid-template-columns: 1fr;
+  }
+
+  .category-card,
+  .category-card:last-child {
+    grid-column: auto;
+
+    min-height: 280px;
+  }
+
+  .products {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+  }
+
+  .product-name {
+    font-size: 15px;
+  }
+
+  .promo {
+    padding: 75px 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-grid > div:first-child {
+    grid-column: span 2;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .top-bar {
+    font-size: 9px;
+  }
+
+  .logo {
+    font-size: 23px;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-form {
+    display: blue;
+  }
+
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 100%;
+
+    border-radius: 999px;
+
+    border: 1px solid #303948;
+  }
+
+  .newsletter-form button {
+    margin-top: 10px;
+
+    border: 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid > div:first-child {
+    grid-column: auto;
+  }
+}
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- TOP BAR -->
+
+  <div class="top-bar">
+    Free shipping on orders over $100 · New season just landed
+  </div>
+
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+
+    <nav class="navbar container">
+
+      <a href="#" class="logo">
+        Y-<span>SHOES</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open menu"
+      >
+        ☰
+      </button>
+
+      <ul class="nav-list" id="navList">
+
+        <li>
+          <a href="#home" class="nav-link">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="#shop" class="nav-link">
+            Shop
+          </a>
+        </li>
+
+        <li>
+          <a href="#categories" class="nav-link">
+            Collections
+          </a>
+        </li>
+
+        <li>
+          <a href="#about" class="nav-link">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="#contact" class="nav-link">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+      <button class="cart-button">
+        Cart
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <!-- HERO -->
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <p class="eyebrow">
+            New Collection · 2026
+          </p>
+
+          <h1 class="hero-title">
+            Step into<br>
+            something new.
+          </h1>
+
+          <p class="hero-text">
+            Designed for movement. Built for everyday life.
+            Discover modern footwear crafted with comfort,
+            character, and effortless style.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a
+              href="#shop"
+              class="button button-primary"
+            >
+              Shop New Arrivals
+            </a>
+
+            <a
+              href="#categories"
+              class="button button-secondary"
+            >
+              Explore Collection
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+
+    <section class="section" id="categories">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div>
+
+            <p class="eyebrow">
+              Find your pair
+            </p>
+
+            <h2 class="section-title">
+              Made for every move.
+            </h2>
+
+          </div>
+
+          <p class="section-description">
+            From everyday sneakers to refined leather shoes,
+            explore footwear designed around the way you live.
+          </p>
+
+        </div>
+
+
+        <div class="categories">
+
+          <a href="#shop" class="category-card">
+
+            <img
+              src="https://brand.assets.adidas.com/f_auto,q_auto,fl_lossy/capi/enGB/Images/bts-uk-blog-body1248997-1247993-bts-fw20-ma-m-1200x1420-uk1_143-543990.jpg"
+              alt="Modern sneakers"
+            >
+
+            <div class="category-overlay">
+
+              <h3>
+                Sneakers
+              </h3>
+
+              <p>
+                Everyday comfort with modern style.
+              </p>
+
+            </div>
+
+          </a>
+
+
+          <a href="#shop" class="category-card">
+
+            <img
+              src="https://i.pinimg.com/originals/42/bb/48/42bb48902adc21603bb7de398eadb4a3.jpg"
+              alt="Running shoes"
+            >
+
+            <div class="category-overlay">
+
+              <h3>
+                Running
+              </h3>
+
+              <p>
+                Lightweight performance for every run.
+              </p>
+
+            </div>
+
+          </a>
+
+
+          <a href="#shop" class="category-card">
+
+            <img
+              src="https://th.bing.com/th/id/R.fd7ac30ff668dfed96626927b44e0f04?rik=9ajb6t1%2fCQQ96Q&riu=http%3a%2f%2ftheslipperspots.com%2fcdn%2fshop%2ffiles%2f0ae08ccb-e477-41a0-83ec-4d8b0e47fb9c.png%3fv%3d1766759874&ehk=ZHCGCHbyRrsVxIMmDKEgjp9hhy5qr53wWh6yplRyo5Y%3d&risl=&pid=ImgRaw&r=0"
+              alt="Leather shoes"
+            >
+
+            <div class="category-overlay">
+
+              <h3>
+                Leather
+              </h3>
+
+              <p>
+                Timeless silhouettes, refined by hand.
+              </p>
+
+            </div>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+
+    <section class="section" id="shop">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div>
+
+            <p class="eyebrow">
+              Our favorites
+            </p>
+
+            <h2 class="section-title">
+              Featured footwear.
+            </h2>
+
+          </div>
+
+          <p class="section-description">
+            A curated selection of our most-loved styles,
+            ready for your next adventure.
+          </p>
+
+        </div>
+
+
+        <div class="products">
+
+
+          <!-- PRODUCT 1 -->
+
+          <article class="product-card">
+
+            <div class="product-image">
+
+              <img
+                src="https://i.pinimg.com/originals/b4/6f/7e/b46f7e41ea1afe2220dfc45e188b7262.jpg"
+                alt="Cloud Runner sneakers"
+              >
+
+              <span class="product-tag">
+                New
+              </span>
+
+            </div>
+
+            <div class="product-info">
+
+              <p class="product-category">
+                Sneakers
+              </p>
+
+              <h3 class="product-name">
+                Addidas
+              </h3>
+
+              <p class="product-price">
+                $129
+              </p>
+
+              <button class="product-button">
+                Add to Cart
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 2 -->
+
+          <article class="product-card">
+
+            <div class="product-image">
+
+              <img
+                src="https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/0a2cf6d6-a214-404f-b0b7-4278b34a4b23/NIKE+AIR+MAX+95+x+LEGO+Col+GS.png"
+                alt="Urban Classic sneakers"
+              >
+
+            </div>
+
+            <div class="product-info">
+
+              <p class="product-category">
+                Lifestyle
+              </p>
+
+              <h3 class="product-name">
+                Nike air max 95
+              </h3>
+
+              <p class="product-price">
+                $145
+              </p>
+
+              <button class="product-button">
+                Add to Cart
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 3 -->
+
+          <article class="product-card">
+
+            <div class="product-image">
+
+              <img
+                src="https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/c56a7298-34e7-4760-b48e-e0042df25a12/NIKE+ACG+ULTRAFLY+TRAIL.png"
+                alt="Aero Sprint running shoes"
+              >
+
+              <span class="product-tag">
+                Best Seller
+              </span>
+
+            </div>
+
+            <div class="product-info">
+
+              <p class="product-category">
+                Running
+              </p>
+
+              <h3 class="product-name">
+                Nike air zoom
+              </h3>
+
+              <p class="product-price">
+                $200
+              </p>
+
+              <button class="product-button">
+                Add to Cart
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 4 -->
+
+          <article class="product-card">
+
+            <div class="product-image">
+
+              <img
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7a2cd8e4-6615-448e-86ac-a219a73a0838/NIKE+REACTX+REJUVEN8+SLIDE.png"
+                alt="Heritage leather shoes"
+              >
+
+            </div>
+
+            <div class="product-info">
+
+              <p class="product-category">
+                Leather
+              </p>
+
+              <h3 class="product-name">
+                Nike reactx rejuven8 slide
+              </h3>
+
+              <p class="product-price">
+                $55
+              </p>
+
+              <button class="product-button">
+                Add to Cart
+              </button>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROMO -->
+
+    <section class="promo" id="about">
+
+      <div class="container">
+
+        <div class="promo-inner">
+
+          <div>
+
+            <p class="eyebrow">
+              The Y-SHOES philosophy
+            </p>
+
+            <h2>
+              Better shoes.
+              Better everyday.
+            </h2>
+
+            <p>
+              We believe great footwear should disappear beneath
+              your feet and let you focus on where you're going.
+              That's why every Y-SHOES design balances comfort,
+              durability, and timeless style.
+            </p>
+
+            <a
+              href="#contact"
+              class="button button-primary"
+            >
+              Discover Our Story
+            </a>
+
+          </div>
+
+
+          <div class="promo-image">
+
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/008/956/590/non_2x/creative-abstract-black-silhouette-running-shoe-design-logo-design-template-free-vector.jpg"
+              alt="Y-shoe collection"
+            >
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- NEWSLETTER -->
+
+    <section class="newsletter" id="contact">
+
+      <div class="container">
+
+        <p class="eyebrow">
+          Stay in step
+        </p>
+
+        <h2>
+          Get 25% off your first pair.
+        </h2>
+
+        <p>
+          Sign up for new releases, exclusive drops,
+          and special offers from Y-SHOES.
+        </p>
+
+        <form class="newsletter-form">
+
+          <input
+            type="email"
+            placeholder="Your email address"
+            aria-label="Your email address"
+            required
+          >
+
+          <button type="submit">
+            Subscribe
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div>
+
+          <div class="footer-logo">
+            Y-SHOES
+          </div>
+
+          <p class="footer-description">
+            Modern footwear designed for every step,
+            every street, and evewalking.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3 class="footer-title">
+            Shop
+          </h3>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="#shop">
+                New Arrivals
+              </a>
+            </li>
+
+            <li>
+              <a href="#shop">
+                Sneakers
+              </a>
+            </li>
+
+            <li>
+              <a href="#shop">
+                Running
+              </a>
+            </li>
+
+            <li>
+              <a href="#shop">
+                Leather
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h3 class="footer-title">
+            Help
+          </h3>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="#">
+                Shipping
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                Returns
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                Size Guide
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                FAQ
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h3 class="footer-title">
+            Follow
+          </h3>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="#">
+                Instagram
+              </a>
+            </li>
+
+            <li>
+              <a href="Y-SHOES">
+                Facebook
+              </a>
+            </li>
+
+            <li>
+              <a href="Y-SHOES45">
+                TikTok
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="copyright">
+        © 2026 Y-SHOES. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    /* MOBILE MENU */
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navList = document.getElementById("navList");
+
+    menuToggle.addEventListener("click", () => {
+      navList.classList.toggle("active");
+    });
+
+
+    /* CLOSE MOBILE MENU AFTER CLICKING LINK */
+
+    document.querySelectorAll(".nav-link").forEach(link => {
+
+      link.addEventListener("click", () => {
+        navList.classList.remove("active");
+      });
+
+    });
+
+
+    /* CART */
+
+    let cartCount = 0;
+
+    const cartCounter =
+      document.getElementById("cartCount");
+
+    document
+      .querySelectorAll(".product-button")
+      .forEach(button => {
+
+        button.addEventListener("click", () => {
+
+          cartCount++;
+
+          cartCounter.textContent = cartCount;
+
+          button.textContent = "Added ✓";
+
+          setTimeout(() => {
+            button.textContent = "Add to Cart";
+          }, 1200);
+
+        });
+
+      });
+
+
+    /* NEWSLETTER */
+
+    const newsletterForm =
+      document.querySelector(".newsletter-form");
+
+    newsletterForm.addEventListener("submit", event => {
+
+      event.preventDefault();
+
+      const email =
+        newsletterForm.querySelector("input").value;
+
+      if (email) {
+
+        alert(
+          "Thanks for subscribing to Y-SHOES!"
+        );
+
+        newsletterForm.reset();
+
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>
+```
